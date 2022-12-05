@@ -8,9 +8,9 @@ return(
     <div className="App">
       <div className="container">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo img-fluid" alt="logo"/>
     
-        Hello to react world 
+  
       </header>
       <main>
         <Dictionary/>
