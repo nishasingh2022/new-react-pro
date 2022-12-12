@@ -1,14 +1,21 @@
 import React, {useState} from"react";
+import axios from "axios";
 import "./Dictionary.css";
+
 export default function Dictionary()
 {
-    let[keyword,setKeyword] =useState("");
-
+    let [keyWord, setKeyword]=useState("");
+    function handleResponse(response){
+        console.log(response.data[0]);
+    }
 
    function search(event)
    {
     event.preventDefault();
-    alert('Searching for ${keyword} defination');
+    alert('Searching for ${keyWord} definition');
+    // declration  of documention 
+    let apiurl="https://api.dictionaryapi.dev/api/v2/entries/en/sunset";
+    axios.get(apiurl).then(handleResponse);
    }
 
 function handleKeywordChange(event) 
